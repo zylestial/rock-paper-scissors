@@ -1,1 +1,3 @@
 # rock-paper-scissors
+
+This project creates a simple Rock–Paper–Scissors game played in the browser console. I wrote a getComputerChoice() function to randomly return rock, paper, or scissors, and a getHumanChoice() function that uses prompt() to get the user’s move. I added score variables for both the human and computer, then created a playRound() function that compares the choices, logs the result, and updates the scores. Finally, I built a playGame() function that runs five rounds, generates new choices each time, keeps track of the score, and announces the overall winner.
