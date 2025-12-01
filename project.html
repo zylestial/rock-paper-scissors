@@ -23,12 +23,14 @@
                         computerChoice = "scissors";
                     }
                     console.log("Computer choice: " + computerChoice);
+                    return computerChoice;
                 }
 
                 function getHumanChoice() {
                     let choice = prompt("Rock, Paper, Scissors?");
                     let humanChoice = choice.toLowerCase();
                     console.log("Human choice: " + humanChoice);
+                    return humanChoice;
                 }
 
                 function playRound(humanChoice, computerChoice) {
