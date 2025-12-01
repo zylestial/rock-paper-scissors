@@ -22,15 +22,13 @@
                     } else {
                         computerChoice = "scissors";
                     }
-                    console.log("Computer Choice: " + computerSelection);
-                    return computerChoice;
+                    console.log("Computer choice: " + computerChoice);
                 }
 
                 function getHumanChoice() {
                     let choice = prompt("Rock, Paper, Scissors?");
                     let humanChoice = choice.toLowerCase();
-                    console.log("Human Choice: " + humanSelection);
-                    return humanChoice;
+                    console.log("Human choice: " + humanChoice);
                 }
 
                 function playRound(humanChoice, computerChoice) {
@@ -49,9 +47,9 @@
                 }
                     
                 for (let i = 0; i < 5; i++){
-                const humanSelection = getHumanChoice();
-                const computerSelection = getComputerChoice();
-                playRound(humanSelection, computerSelection);
+                    const humanSelection = getHumanChoice();
+                    const computerSelection = getComputerChoice();
+                    playRound(humanSelection, computerSelection);
                 }
 
                 console.log("Human: " + humanScore);
