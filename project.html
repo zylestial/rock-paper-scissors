@@ -12,7 +12,6 @@
             let humanScore = 0;
             let computerScore = 0;
 
-            for (let i = 0; i < 5; i++){
                 function getComputerChoice() {
                     let randomNumber = Math.floor(Math.random() * 3) + 1;
                     let computerChoice = " "
@@ -23,12 +22,14 @@
                     } else {
                         computerChoice = "scissors";
                     }
+                    console.log("Computer Choice: " + computerSelection);
                     return computerChoice;
                 }
 
                 function getHumanChoice() {
                     let choice = prompt("Rock, Paper, Scissors?");
                     let humanChoice = choice.toLowerCase();
+                    console.log("Human Choice: " + humanSelection);
                     return humanChoice;
                 }
 
@@ -47,23 +48,26 @@
                     }  
                 }
                     
+                for (let i = 0; i < 5; i++){
                 const humanSelection = getHumanChoice();
                 const computerSelection = getComputerChoice();
-           
                 playRound(humanSelection, computerSelection);
+                }
+
+                console.log("Human: " + humanScore);
+                console.log("Computer: " + computerScore);
+
+                if (humanScore === computerScore) {
+                    console.log("It's a tie!")
+                } else if (humanScore > computerScore) {
+                    console.log("Human is the Champion!")
+                } else {
+                    console.log("Computer is the Champion!");
+                }
             }
 
-            console.log("Human: " + humanScore);
-            console.log("Computer: " + computerScore);
+            
 
-            if (humanScore === computerScore) {
-                console.log("It's a tie!")
-            } else if (humanScore > computerScore) {
-                console.log("Human wins!")
-            } else {
-                console.log("Computer wins!");
-            }
-        }
 
         playGame();
            
